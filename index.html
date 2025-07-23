@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Manus - TKS</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>TKS_V5_HOSTINGER</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Assinatura - TKS Vantagens</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tela carregamento -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+
+  <!-- Estilos locais -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  
+ <!-- Bloco Novo (CORRETO ) -->
+<div id="loader-overlay" class="hidden">
+  <dotlottie-wc 
+    src="https://lottie.host/67734727-820e-41a3-a91f-04803ba66e8d/0l9yhuta6a.lottie" 
+    style="width: 200px; height: 200px" 
+    speed="1" 
+    autoplay 
+    loop>
+  </dotlottie-wc>
+</div>
+  
+  <div class="scene">
+    <div class="glass-card">
+
+      <!-- LOGO -->
+      <img src="https://9bdfb0bda241abec0070c316a6c54b19.cdn.bubble.io/f1752029544854x183955727416655230/LOGO%20TKS%20copiar%207.png" 
+           alt="TKS Vantagens" class="logo">
+
+      <!-- FORMULÁRIO -->
+      <main id="checkout">
+
+        <!-- 1 ▸ CPF -->
+        <section class="step active" data-step="1">
+          <h2>Bem-vindo! 👋</h2>
+          <p class="sub gold">Digite seu CPF para começar.</p>
+
+          <label>CPF
+            <input type="text" id="cpf" maxlength="14" placeholder="000.000.000-00">
+            <span id="cpf-error">CPF inválido. Digite um CPF válido.</span>
+            <p id="cpf-error" class="cpf-error-msg" style="display: none;">CPF inválido. Digite um CPF válido.</p>
+          </label>
+
+          <button id="btn-avancar" class="btn">Avançar ➜</button>
+        </section>
+
+        <!-- 2 ▸ DADOS -->
+        <section class="step" data-step="2">
+          <h2>Seus dados</h2>
+          <p class="sub gold">Queremos te conhecer um pouco mais 🚀</p>
+
+          <label>Nome Completo<input type="text" id="nome">
+            <p class="cpf-error-msg" id="nome-error" style="display: none;">Campo obrigatório.</p>
+          </label>
+          <label>E-mail<input type="email" id="email">
+            <p class="cpf-error-msg" id="email-error" style="display: none;">E-mail inválido.</p>
+          </label>
+          <label>Data de Nascimento<input type="date" id="nasc">
+            <p class="cpf-error-msg" id="nasc-error" style="display: none;">Campo obrigatório.</p>
+          </label>
+
+          <div class="birth-picker-mobile">
+            <div class="picker-row">
+              <select id="birth-day"><option disabled selected>Dia</option></select>
+              <select id="birth-month"><option disabled selected>Mês</option></select>
+              <select id="birth-year"><option disabled selected>Ano</option></select>
+            </div>
+          </div>
+
+          <label>Senha
+            <input type="password" id="senha" name="senha" required>
+            <p class="cpf-error-msg" id="senha-error" style="display: none;">A senha não atende aos critérios.</p>
+            <small>
+              Sua senha deve conter no mínimo 8 caracteres:<br>
+              - 1 letra maiúscula;<br>
+              - 1 letra minúscula;<br>
+              - 1 número;<br>
+              - 1 caractere especial (#%ˆ@!]
+            </small>
+          </label>
+
+          <label>Confirmar Senha<input type="password" id="pass2">
+           <p class="cpf-error-msg" id="pass2-error" style="display: none;">As senhas não coincidem.</p>
+          </label>
+
+          <div class="nav">
+            <button class="btn ghost prev">← Voltar</button>
+            <button class="btn next">Continuar ➜</button>
+          </div>
+        </section>
+
+        <!-- 3 ▸ PLANO + PAGAMENTO -->
+        <section class="step" data-step="3">
+          <h2>Escolha seu plano</h2>
+
+          <!-- INDIVIDUAL -->
+          <h3 class="group-title">
+            Individual
+            <img src="https://9bdfb0bda241abec0070c316a6c54b19.cdn.bubble.io/f1752038025058x123141019673477460/info%20%281%29.svg"
+                 alt="info" class="info-icon" data-type="individual">
+          </h3>
+          <div class="plans">
+            <input hidden type="radio" name="plano" id="p1" checked>
+            <label for="p1" class="card"><strong>Básico</strong><span>R$ 1,50/mês</span></label>
+
+            <input hidden type="radio" name="plano" id="p3">
+            <label for="p3" class="card"><strong>Individual Mensal</strong><span>R$ 54,90/mês</span></label>
+
+            <input hidden type="radio" name="plano" id="p2">
+            <label for="p2" class="card"><strong>Individual Semestral</strong><span>R$ 29,90/mês</span></label>
+          </div>
+
+          <!-- FAMILIAR -->
+          <h3 class="group-title">
+            Familiar
+            <img src="https://9bdfb0bda241abec0070c316a6c54b19.cdn.bubble.io/f1752038025058x123141019673477460/info%20%281%29.svg"
+                 alt="info" class="info-icon" data-type="familiar">
+          </h3>
+          <div class="plans">
+            <input hidden type="radio" name="plano" id="p5">
+            <label for="p5" class="card"><strong>Familiar Mensal</strong><span>R$ 129,90/mês</span></label>
+
+            <input hidden type="radio" name="plano" id="p4">
+            <label for="p4" class="card"><strong>Familiar Semestral</strong><span>R$ 74,90/mês</span></label>
+          </div>
+
+          <div class="divider">Forma de Pagamento</div>
+          <div class="pays">
+            <input hidden type="radio" name="pay" id="cc" checked>
+            <label for="cc" class="radio">Cartão de Crédito</label>
+
+            <input hidden type="radio" name="pay" id="boleto">
+            <label for="boleto" class="radio">Boleto</label>
+
+            <input hidden type="radio" name="pay" id="pix">
+            <label for="pix" class="radio">Pix</label>
+          </div>
+
+          <div id="card-fields" class="pay-fields">
+            <label>Nº Cartão <input type="text" id="cc-num" maxlength="19" placeholder="0000 0000 0000 0000">
+               <p class="cpf-error-msg" id="cc-num-error" style="display: none;">Campo obrigatório.</p>
+            </label>
+            <label>CVV       <input type="text" id="cvv" maxlength="4" placeholder="123">
+              <p class="cpf-error-msg" id="cvv-error" style="display: none;">Campo obrigatório.</p>
+            </label>
+            <label>Validade  <input type="text" id="expiry" maxlength="5" placeholder="MM/AA">
+              <p class="cpf-error-msg" id="expiry-error" style="display: none;">Campo obrigatório.</p>
+            </label>
+            <label>Titular do Cartão <input type="text" id="holder">
+               <p class="cpf-error-msg" id="holder-error" style="display: none;">Campo obrigatório.</p>
+            </label>
+          </div>
+
+          <label class="terms">
+            <input type="checkbox" id="ok">
+            <span class="terms-link">Eu declaro que li e aceito integralmente o Termo de Assinatura e a Política de Privacidade</span>
+          </label>
+
+          <div class="nav">
+            <button class="btn ghost prev">← Voltar</button>
+            <button class="btn next">Assinar ➜</button>
+          </div>
+        </section>
+
+        <!-- 4 ▸ CATEGORIAS -->
+        <section class="step" data-step="4">
+          <h2>📦 Categorias de Interesse</h2>
+          <p class="sub">Nos diga com o que você mais se identifica<br>para receber ofertas personalizadas ↓</p>
+
+          <div class="tag-container">
+            <label class="tag"><input type="checkbox" name="cat" value="farmacia"><span>Farmácia</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="eletro"><span>Eletrodoméstico</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="auto"><span>Automotivo</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="beleza"><span>Beleza e Bem-Estar</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="moda"><span>Moda</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="decor"><span>Decoração</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="gastro"><span>Gastronomia</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="mercado"><span>Supermercado</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="fitness"><span>Esporte & Fitness</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="viagem"><span>Viagem & Turismo</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="entretenimento"><span>Entretenimento</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="pets"><span>Pets</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="saude"><span>Rede de Saúde</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="otica"><span>Óticas</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="educacao"><span>Educação</span></label>
+            <label class="tag"><input type="checkbox" name="cat" value="eventos"><span>Eventos</span></label>
+          </div>
+
+          <div class="nav">
+            <button class="btn ghost prev">← Voltar</button>
+            <button class="btn next">Continuar ➜</button>
+          </div>
+        </section>
+
+        <!-- 5 ▸ RESULTADO -->
+        <section class="step" data-step="5">
+          <h2>Status do Pagamento</h2>
+          <div id="result" class="result">Aguarde um instante.</div>
+          <a class="btn" href="https://app.tksvantagens.com.br/auth/signin">Acessar Benefícios</a>
+        </section>
+      </main>
+
+      <!-- MODAL -->
+      <div id="infoModal" class="modal">
+        <div class="modal-box" id="modalBox">
+          <button class="modal-close">×</button>
+          <h3 id="modalTitle"></h3>
+          <div class="modal-content" id="modalScroll">
+            <p id="modalText"></p>
+          </div>
+          <button class="modal-close footer-close">Fechar ✓</button>
+        </div>
+      </div>
+
+      <!-- POPUP -->
+      <div id="custom-popup" class="hidden">
+        <div class="popup-content">
+          <p id="popup-message"></p>
+          <button id="popup-action" style="display: none;">Fazer Login</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
